@@ -1,38 +1,98 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 92vh;
+  background-image: url(./todo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.add-btn,.delete-btn {
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 3px 8px;
+  margin-left: 1rem;
+  border: none;
+  font-size: 20px;
+  background-color: #800080;
+}
+
+.add-btn:focus {
+  outline: none;
+}
+
+.big-phone {
+  width: 28%;
+  border-radius: 2rem;
+  height: 85vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.small-phone, .big-phone {
+  border: 1px solid #800080;
+  margin: auto;
+  margin-top: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.small-phone {
+  border-radius: 2rem;
+  width: 70%;
+  height: 50vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input {
+  border-radius: 4rem;
+  border: none;
+  padding: 10px 0;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1 {
+  color: #800080;
+  margin: 2rem 0;
+}
+
+ol.task-list {
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #800080;
+  font-weight: bolder;
 }
 
-.App-link {
-  color: #61dafb;
+.task-item {
+  margin: 0.5rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 600px) {
+  body {
+    padding-top: 2rem;
+    max-height: 94vh;
+    
   }
-  to {
-    transform: rotate(360deg);
+  .big-phone {
+    width: 90%;
+    margin: auto;
+  }
+  .small-phone {
+    width: 80%;
+    margin: auto;
+    height: 54vh;
+  }
+
+  input {
+    width: 50%;
+    margin-bottom: 1rem;
+    padding: 10px 0;
+    text-align: center;
   }
 }
+
